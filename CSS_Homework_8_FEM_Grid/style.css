@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Mulish", sans-serif;
+}
+
+body {
+     background: #ecf2f8;
+     height: 100vh;
+}
+
+img {
+     width: 100%;
+}
+
+.text-white {
+     color: #ffffff;
+}
+
+#fem-grid-container {
+     padding: 4rem 10rem;
+     gap: 2rem;
+     height: 100vh;
+     display: grid;
+     grid-template-rows: repeat(2, 1fr);
+     grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+     padding: 2rem;
+     border-radius: 10px;
+     background: #ffffff;
+     position: relative;
+     box-shadow:
+          rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+          rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.box .avatar img {
+     border-radius: 50%;
+}
+
+.box .quotation {
+     position: absolute;
+}
+
+.first-box {
+     grid-column: 1/3;
+     background: #7541c8;
+     color: #ffffff;
+     background-image: url(images/quotation.svg);
+     background-repeat: no-repeat;
+     background-position: top right 10%;
+}
+
+.second-box {
+     background: #48556a;
+     color: #ffffff;
+}
+
+.third-box {
+     grid-area: 1/4/3/5;
+}
+
+.fifth-box {
+     grid-column: 2/4;
+     background: #212121;
+     color: #ffffff;
+}
+
+.box .name-bar {
+     display: grid;
+     grid-template-columns: 30px 1fr;
+     gap: 15px;
+     margin-bottom: 20px;
+}
+
+.box .name {
+     font-size: 0.9rem;
+}
+
+.box .role {
+     opacity: 0.7;
+     font-size: 0.7rem;
+}
+
+.box .head {
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+
+.box .text {
+     opacity: 0.7;
+     font-size: 0.8rem;
+}
