@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Karla", sans-serif;
+}
+
+body {
+     color: #ffffff;
+     background: #000000;
+     padding: 40px;
+}
+
+::-webkit-scrollbar {
+     width: 5px;
+     background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+     background: #ff0000;
+}
+
+.mb-10 {
+     margin-bottom: 10px;
+}
+
+.mb-20 {
+     margin-bottom: 20px;
+}
+
+.mb-30 {
+     margin-bottom: 30px;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.d-flex {
+     display: flex;
+}
+
+.justify-content-center {
+     justify-content: center;
+}
+
+.align-items-center {
+     align-items: center;
+}
+
+#magazine-wrapper {
+     max-width: 900px;
+     margin: 0 auto;
+     background: #212121;
+     padding: 20px;
+}
+
+.main-head-block {
+     text-align: center;
+     color: #ff0000;
+     line-height: 1;
+}
+
+.main-head-block .head {
+     font-family: "Anton", sans-serif;
+     font-size: 4rem;
+}
+
+.main-head-block .slogan {
+     font-size: 1.5rem;
+}
+
+.author-block {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: center;
+}
+
+.author-block .left-block div:nth-child(1) {
+     font-size: 1.7rem;
+}
+
+.author-block .left-block div:nth-child(2) {
+     font-size: 1.3rem;
+     color: #808080;
+}
+
+.author-block .right-block {
+     display: flex;
+     justify-content: flex-end;
+     gap: 30px;
+     font-size: 1.6rem;
+}
+
+.content-block {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+}
+
+.content-block .block > div:not(:last-child) {
+     margin-bottom: 10px;
+}
+
+.content-block .top-left-block > div:nth-child(1)::first-letter {
+     color: #ff0000;
+     font-size: 3rem;
+}
+
+blockquote {
+     color: #32a4ea;
+     font-size: 1.3rem;
+     padding: 20px 0;
+     text-align: center;
+     border-top: 2px solid #616262;
+     border-bottom: 2px solid #616262;
+}
+
+.content-block .image-quote {
+     grid-area: 2/2/3/4;
+}
+
+.content-block .survey-image {
+     grid-area: 4/2/5/4;
+}
+
+.content-block .bottom-left-block {
+     grid-area: 2/1/5/2;
+}
+
+.content-block .inner-block > div:nth-child(1),
+.content-block .inner-block.head-block > div:nth-child(2) {
+     font-size: 1.2rem;
+}
+
+.content-block .inner-block.head-block > div:nth-child(1) {
+     font-size: 1.5rem;
+     color: #32a4ea;
+}
+
+.content-block .inner-block > div:nth-child(1) {
+     color: #32a4ea;
+}
