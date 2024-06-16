@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Karla", sans-serif;
+}
+
+body {
+     background: #212121;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     padding: 2rem;
+}
+
+a {
+     color: #000000;
+}
+
+button {
+     background: #212121;
+     color: #ffffff;
+     border: 1px solid #212121;
+     padding: 10px 20px;
+     letter-spacing: 2px;
+}
+
+button:hover {
+     background: #ffffff;
+     color: #212121;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.container-wrapper {
+     padding: 5rem;
+     width: 100%;
+     max-width: 1000px;
+     background: rgb(255, 255, 255);
+     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, rgba(253, 208, 46, 1) 25%);
+     display: grid;
+     grid-template-columns: 1fr 1.3fr;
+     gap: 30px;
+     align-items: center;
+}
+
+.image img {
+     max-height: 450px;
+}
+
+.content {
+     text-align: center;
+     font-weight: bold;
+     display: grid;
+     gap: 10px;
+}
+
+.content .head {
+     font-weight: 800;
+     font-size: 2.5rem;
+}
+
+@media screen and (max-width: 991px) {
+     .container-wrapper {
+          padding: 4rem;
+     }
+
+     .content .head {
+          font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     .container-wrapper {
+          padding: 3rem;
+     }
+
+     .content .head {
+          font-size: 1.7rem;
+     }
+
+     .content {
+          font-size: 0.9rem;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     .container-wrapper {
+          padding: 3rem;
+     }
+
+     .content .head {
+          font-size: 1.7rem;
+     }
+}
+
+@media screen and (max-width: 576px) {
+     body {
+          padding: 10px;
+     }
+
+     .container-wrapper {
+          padding: 1.5rem;
+          grid-template-columns: 1fr;
+     }
+
+     .content .head {
+          font-size: 1.5rem;
+     }
+}
