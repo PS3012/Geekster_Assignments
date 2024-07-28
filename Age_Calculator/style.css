@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+     font-weight: 500;
+     font-size: 1.1rem;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.position-relative {
+     position: relative;
+}
+
+.position-absolute {
+     position: absolute;
+}
+
+.text-center {
+     text-align: center;
+}
+
+input,
+input:focus,
+input:focus-visible {
+     border: 0;
+     outline: 0;
+     box-shadow: unset;
+}
+
+main {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+}
+
+.age-calculator {
+     max-width: 600px;
+     margin: 0 auto;
+}
+
+.age-calculator .top-box {
+     padding: 30px;
+     box-shadow:
+          rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+     border-radius: 10px;
+     margin-bottom: 30px;
+}
+
+.age-calculator .top-box .head {
+     font-weight: bold;
+     font-size: 2.5rem;
+     margin-bottom: 30px;
+}
+
+.age-calculator .top-box .input-box {
+     border: 1px solid #21212190;
+     padding: 7px 15px;
+     border-radius: 5px;
+     margin-bottom: 20px;
+}
+
+.age-calculator .top-box .input-box input[type="date"] {
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     height: 100%;
+}
+
+.age-calculator .top-box .input-box input[type="date"]::-webkit-calendar-picker-indicator {
+     width: 100%;
+}
+
+.age-calculator .bottom-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+}
+
+.age-calculator .bottom-grid > div {
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow:
+          rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.age-calculator .bottom-grid > div > div:nth-child(1) {
+     font-size: 2rem;
+     margin-bottom: 5px;
+     font-weight: bold;
+}
