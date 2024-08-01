@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+     font-weight: 500;
+     font-size: 1rem;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+textarea:focus,
+textarea:focus-visible {
+     outline: unset;
+}
+
+textarea,
+main .left-part .color-picker {
+     border: 1px solid #21212160;
+     border-radius: 4px;
+     padding: 7px 15px;
+     background: #ffffff;
+}
+
+input {
+     border: 0;
+     background: transparent;
+     padding: 0;
+}
+
+main {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     height: 100vh;
+}
+
+main .left-part {
+     display: flex;
+     align-items: center;
+     padding: 2rem;
+     background: #f8c30159;
+}
+
+main .left-part .form-block {
+     max-width: 400px;
+     margin: 0 auto;
+     display: grid;
+     gap: 20px;
+}
+
+main .left-part .color-picker {
+     display: grid;
+     grid-template-columns: 1fr 100px;
+     align-items: center;
+     margin-bottom: 10px;
+}
+
+main .left-part button {
+     background: #ff0000;
+     padding: 10px 20px;
+     border-radius: 4px;
+     color: #ffffff;
+     border: 0;
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+}
+
+main .left-part button div {
+     position: relative;
+     z-index: 2;
+}
+
+main .left-part button::after {
+     position: absolute;
+     top: 0;
+     left: 100%;
+     background: #212121;
+     content: "";
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+     transition: all 0.2s linear;
+}
+
+main .left-part button:hover::after {
+     left: 0;
+}
+
+main .left-part .message {
+     color: #ff0000;
+     font-weight: bold;
+}
+
+main .right-part {
+     padding: 30px;
+}
+
+main .right-part .main-head {
+     font-size: 30px;
+     text-align: center;
+     font-weight: 700;
+     margin-bottom: 20px;
+}
+
+#notes-list {
+     max-height: calc(100vh - 120px);
+     overflow-y: auto;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+}
+
+#notes-list .note-item {
+     min-height: 150px;
+     border-radius: 5px;
+     padding: 15px;
+     border: 1px solid #21212160;
+}
+
+#notes-list .note-item > button {
+     display: block;
+     border: 0;
+     padding: 0;
+     background: transparent;
+     margin-left: auto;
+     margin-bottom: 5px;
+     font-size: 1.3rem;
+     line-height: 1;
+     cursor: pointer;
+}
+
+#notes-list .no-notes {
+     grid-column: 1/4;
+     text-align: center;
+     font-size: 1.2rem;
+     font-weight: 600;
+}
