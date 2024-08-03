@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+     transition: all 0.3s linear;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+.fw-600 {
+     font-weight: 600;
+}
+
+.mb-1 {
+     margin-bottom: 1rem;
+}
+
+.mb-2 {
+     margin-bottom: 2rem;
+}
+
+.text-center {
+     text-align: center;
+}
+
+.overflowY-auto {
+     overflow-y: auto;
+}
+
+input {
+     border: 0;
+     background: transparent;
+     font-size: 1.1rem;
+}
+
+input:focus,
+input:focus-visible {
+     outline: none;
+}
+
+button {
+     border: 0;
+     background: none;
+     outline: unset;
+     cursor: pointer;
+     font-size: 1.7rem;
+     line-height: 1;
+     transition: all 0.3s linear;
+     background: #0193de;
+     padding: 5px 0;
+     border-radius: 4px;
+     color: #ffffff;
+}
+
+button:hover {
+     background: #212121;
+}
+
+main {
+     padding: 5rem;
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     gap: 2rem;
+}
+
+main > div {
+     background: #0193de30;
+     height: calc(100vh - 10rem);
+     padding: 2rem;
+}
+
+main .heading {
+     font-size: 2rem;
+}
+
+.product-card {
+     display: grid;
+     grid-template-columns: 1fr 250px 150px;
+     align-items: center;
+     gap: 20px;
+     padding: 1rem;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     background: #ffffff;
+     border-radius: 5px;
+}
+
+.product-card .quantity {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     background: #0193de30;
+     padding: 5px;
+     border-radius: 4px;
+}
+
+.product-card .name {
+     font-size: 1.5rem;
+}
+
+.product-card .price {
+     font-size: 1.2rem;
+}
+
+.cart-list {
+     display: grid;
+     grid-template-rows: 1fr 60px;
+     gap: 20px;
+}
+
+.cart-list .total {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     justify-content: space-between;
+     font-size: 1.3rem;
+     background: #ffffff;
+     padding: 1rem;
+}
+
+.cart-card {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 20px;
+     padding: 1rem;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     background: #ffffff;
+     border-radius: 5px;
+}
+
+.cart-card .name {
+     font-size: 1.5rem;
+}
+
+.cart-card .price {
+     font-size: 1.2rem;
+     text-align: right;
+}
+
+.blank {
+     font-size: 1.2rem;
+}
