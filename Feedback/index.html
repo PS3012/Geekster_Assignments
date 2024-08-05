@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="user-feedback">
+        <div class="main-title fw-700">Feedback UI</div>
+        <div class="item-box">
+          <div class="item" data-rating="Excellent">
+            <div class="emoji">
+              <img
+                src="	https://cdn-icons-png.flaticon.com/512/9490/9490050.png"
+                alt="..."
+              />
+            </div>
+            <div class="name fw-600">Excellent</div>
+          </div>
+          <div class="item" data-rating="Good">
+            <div class="emoji">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/166/166538.png"
+                alt="..."
+              />
+            </div>
+            <div class="name fw-600">Good</div>
+          </div>
+          <div class="item" data-rating="Medium">
+            <div class="emoji">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1791/1791385.png"
+                alt="..."
+              />
+            </div>
+            <div class="name fw-600">Medium</div>
+          </div>
+          <div class="item" data-rating="Poor">
+            <div class="emoji">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/166/166527.png"
+                alt="..."
+              />
+            </div>
+            <div class="name fw-600">Poor</div>
+          </div>
+          <div class="item" data-rating="Very Bad">
+            <div class="emoji">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/9490/9490062.png"
+                alt="..."
+              />
+            </div>
+            <div class="name fw-600">Very Bad</div>
+          </div>
+        </div>
+        <div class="button">
+          <button id="send-review">Send Review</button>
+        </div>
+      </section>
+      <section class="feedback-response none">
+        <div>
+          <img src="thanks.png" alt="..." />
+        </div>
+        <div class="main-title fw-700">Thank You!</div>
+        <div class="fs-2 text-center fw-600 mb-1">
+          Feedback: <span class="response">Neutral</span>
+        </div>
+        <div class="fs-1 text-center fw-600">
+          We'll use your feedback to improve our customer support.
+        </div>
+      </section>
+
+      <div class="toaster fw-700 hide"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

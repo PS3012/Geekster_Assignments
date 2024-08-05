@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+     transition: all 0.3s linear;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+input {
+     border: 1px solid #21212160;
+     padding: 7px 15px;
+     border-radius: 4px;
+     font-size: 1.1rem;
+}
+
+button {
+     border: 0;
+     background: #0000ff30;
+     outline: unset;
+     cursor: pointer;
+     transition: all 0.3s linear;
+     border-radius: 4px;
+     font-size: 1.2rem;
+}
+
+button:hover {
+     background: #212121;
+     color: #ffffff;
+}
+
+.cursor-pointer {
+     cursor: pointer;
+}
+
+main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+.main-title {
+     font-size: 2rem;
+     text-align: center;
+     margin-bottom: 2rem;
+}
+
+.generate-box {
+     padding: 2rem;
+     border-radius: 5px;
+     width: 600px;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.generate-box .top-form {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+     margin-bottom: 1rem;
+     gap: 1rem;
+}
+
+.generate-box .password-box {
+     border: 1px solid #21212160;
+     padding: 7px 15px;
+     border-radius: 4px;
+     font-size: 1.1rem;
+     display: grid;
+     grid-template-columns: 1fr 25px;
+     align-items: center;
+     gap: 1rem;
+}
+
+.toaster {
+     position: absolute;
+     top: 2rem;
+     left: 50%;
+     transform: translate(-50%, 0);
+     padding: 1rem;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+     border-radius: 5px;
+     font-size: 1.1rem;
+     transition: all 0.4s linear;
+     opacity: 1;
+}
+
+.toaster.hide {
+     opacity: 0;
+}
