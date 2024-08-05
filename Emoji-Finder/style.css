@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+     transition: all 0.3s linear;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-600 {
+     font-weight: 600;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+input {
+     border: 1px solid #21212160;
+     padding: 7px 15px;
+     border-radius: 4px;
+     font-size: 1.1rem;
+}
+
+main {
+     padding: 2rem 5rem;
+}
+
+.main-title {
+     font-size: 3rem;
+     text-align: center;
+     margin-bottom: 2rem;
+}
+
+.search-area {
+     display: grid;
+     grid-template-columns: 1fr repeat(6, 50px);
+     gap: 10px;
+     margin-bottom: 2rem;
+}
+
+.search-area div {
+     text-align: center;
+     font-size: 1.3rem;
+     cursor: pointer;
+}
+
+.emoji-grid {
+     display: grid;
+     grid-template-columns: repeat(10, 1fr);
+     gap: 30px;
+}
+
+.emoji-item {
+     text-align: center;
+     padding: 1rem 0;
+     border-radius: 5px;
+     font-size: 2rem;
+     transition: all 0.3s linear;
+     cursor: pointer;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.emoji-item:hover {
+     background: #0000ff30;
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.emoji-popup {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 3rem;
+     background: #ffffff;
+     z-index: 3;
+     border-radius: 5px;
+     width: 500px;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.toaster {
+     position: fixed;
+     top: 2rem;
+     right: 2rem;
+     padding: 1rem;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+     border-radius: 5px;
+     font-size: 1.1rem;
+     transition: all 0.4s linear;
+     opacity: 1;
+     background: #ffffff;
+}
+
+.toaster.hide {
+     opacity: 0;
+}

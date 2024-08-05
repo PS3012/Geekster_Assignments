@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-title fw-700">Get your Perfect Emoji</div>
+      <div class="search-area">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search your Emoji"
+          class="fw-600"
+        />
+        <div class="filter" data-query="">❌</div>
+        <div class="filter" data-query="face">😀</div>
+        <div class="filter" data-query="hand">🖐️</div>
+        <div class="filter" data-query="travel">🧭</div>
+        <div class="filter" data-query="heart">🖤</div>
+        <div class="filter" data-query="animal">🐻‍❄️</div>
+      </div>
+      <div class="emoji-grid"></div>
+      <div class="toaster fw-700 hide"></div>
+    </main>
+    <script src="emojilist.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
