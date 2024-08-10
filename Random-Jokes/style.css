@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-600 {
+     font-weight: 600;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background: #d1e9f6;
+}
+
+.joke-container {
+     padding: 2rem;
+     border-radius: 5px;
+     width: 750px;
+     background: #ffffff;
+     box-shadow:
+          rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.joke-container .main-title {
+     font-size: 3rem;
+     text-align: center;
+     margin-bottom: 3rem;
+}
+
+.joke-container .joke {
+     font-size: 1.2rem;
+     text-align: center;
+     margin-bottom: 3rem;
+}
+
+.joke-container .buttons {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+}
+
+.joke-container button {
+     width: 200px;
+     display: block;
+     padding: 10px 0;
+     text-align: center;
+     cursor: crosshair;
+     position: relative;
+     border: 3px solid #212121;
+     font-size: 1.2rem;
+     font-weight: 700;
+     background: transparent;
+}
+
+.joke-container button span {
+     position: relative;
+     z-index: 3;
+}
+
+.joke-container button::after,
+.joke-container button::before {
+     content: "";
+     background: #ffffff;
+     position: absolute;
+     transition: all 0.3s linear;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.joke-container button::after {
+     width: calc(100% + 30px);
+     height: calc(100% - 10px);
+}
+
+.joke-container button::before {
+     width: calc(100% - 10px);
+     height: calc(100% + 30px);
+}
+
+.joke-container button:hover::after {
+     height: calc(100% - 20px);
+}
+
+.joke-container button:hover::before {
+     width: calc(100% - 40px);
+}
