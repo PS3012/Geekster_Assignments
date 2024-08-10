@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+main {
+     height: 100vh;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+}
+
+.seconds-bar {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 40%;
+     background: #ffffff;
+     height: 5px;
+     transition: all 1s linear;
+}
+
+.clock-container {
+     height: 100vh;
+     padding: 2rem 3rem;
+     background: #21212180;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+}
+
+.clock-container .time {
+     color: #ffffff;
+     line-height: 1;
+     font-size: 7rem;
+}
+
+.clock-container .currentDate {
+     color: #ffffff;
+     text-align: right;
+     font-size: 1.5rem;
+     margin-bottom: 20px;
+}
+
+.weather-details {
+     position: absolute;
+     bottom: 2rem;
+     left: 3rem;
+     padding: 1rem;
+     backdrop-filter: blur(10px);
+     color: #ffffff;
+     width: 250px;
+     background: #ffffff10;
+     border-radius: 5px;
+}
+
+.weather-details .temperature {
+     font-size: 2rem;
+     margin-bottom: 20px;
+}
+
+.weather-details .wind {
+     font-size: 1rem;
+}

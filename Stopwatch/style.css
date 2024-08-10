@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+.stopwatch-container {
+     padding: 30px;
+     border-radius: 5px;
+     width: 750px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     text-align: center;
+     background: #303841;
+}
+
+.stopwatch-container .timer-block {
+     margin-bottom: 30px;
+     border-radius: 5px;
+     padding: 40px 30px;
+     background: #ffffff;
+     box-shadow:
+          rgb(204, 219, 232) 3px 3px 6px 0px inset,
+          rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.stopwatch-container .timer-block .timer {
+     font-size: 5rem;
+     font-weight: 700;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr 25px) 1.5fr;
+     align-items: center;
+}
+
+.stopwatch-container .button-block {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 30px;
+}
+
+.stopwatch-container .button-block div {
+     border-radius: 5px;
+     cursor: pointer;
+     background: #ffffff;
+     box-shadow:
+          rgb(204, 219, 232) 3px 3px 6px 0px inset,
+          rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+     padding: 20px 0;
+     font-size: 2rem;
+}
+
+.lap-grid {
+     position: fixed;
+     top: 0;
+     right: 0;
+     width: 300px;
+     max-height: 100vh;
+     padding: 20px;
+     overflow-y: auto;
+     display: grid;
+     gap: 10px;
+}
+
+.lap-grid .lap-item {
+     font-weight: 700;
+     padding: 10px 30px;
+     border-radius: 5px;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.toaster {
+     position: absolute;
+     top: 2rem;
+     left: 50%;
+     transform: translate(-50%, 0);
+     padding: 1rem;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+     border-radius: 5px;
+     font-size: 1.1rem;
+     transition: all 0.4s linear;
+     opacity: 1;
+}
+
+.toaster.hide {
+     opacity: 0;
+}

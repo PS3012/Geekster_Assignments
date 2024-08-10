@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="stopwatch-container">
+        <div class="timer-block">
+          <div class="timer">
+            <div>00</div>
+            <div>:</div>
+            <div>00</div>
+            <div>:</div>
+            <div>00</div>
+            <div>.</div>
+            <div>000</div>
+          </div>
+        </div>
+        <div class="button-block">
+          <div action="play"><i class="fa-solid fa-play"></i></div>
+          <div action="pause"><i class="fa-solid fa-pause"></i></div>
+          <div action="reset">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <div action="lap"><i class="fa-solid fa-flag"></i></div>
+        </div>
+      </div>
+      <div class="toaster fw-700 hide"></div>
+      <div class="lap-grid"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
