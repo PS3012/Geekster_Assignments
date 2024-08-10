@@ -3,6 +3,7 @@ const wind = document.querySelector(".wind");
 const time = document.querySelector(".time");
 const currentDate = document.querySelector(".currentDate");
 const secondsBar = document.querySelector(".seconds-bar");
+const audio = document.getElementById("audio");
 const weekDays = [
   "Sunday",
   "Monday",
@@ -73,8 +74,13 @@ const getWeatherInfo = () => {
   );
 };
 
-getWeatherInfo();
+window.addEventListener("load", () => {
+  getWeatherInfo();
+  setInterval(() => {
+    getCurrentDateTime();
+  }, 1000);
 
-setInterval(() => {
-  getCurrentDateTime();
-}, 1000);
+  audio.play().catch((error) => {
+    console.log("Autoplay blocked or error occurred:", error);
+  });
+});
