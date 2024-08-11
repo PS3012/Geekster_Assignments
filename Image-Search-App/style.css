@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Figtree", sans-serif;
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.fw-600 {
+     font-weight: 600;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+input:focus,
+input:focus-visible {
+     border: 0;
+     outline: 0;
+}
+
+button {
+     border: 0;
+     font-size: 1.2rem;
+     background: #0193de;
+     color: #ffffff;
+     transition: all 0.3s linear;
+     cursor: pointer;
+}
+
+button:hover {
+     background: #85c226;
+}
+
+main {
+     padding: 2rem 5rem;
+     position: relative;
+}
+
+.main-title {
+     font-size: 3rem;
+     text-align: center;
+     margin-bottom: 2rem;
+}
+
+.search {
+     max-width: 800px;
+     margin: 0 auto 2rem;
+     display: grid;
+     grid-template-columns: 1fr 150px;
+     border-radius: 5px;
+     overflow: hidden;
+     border: 1px solid #21212140;
+     margin-bottom: 2rem;
+}
+
+.search input {
+     padding: 10px 20px;
+     font-size: 1.2rem;
+     border: 0;
+}
+
+.image-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2rem;
+     margin-bottom: 2rem;
+}
+
+.image-grid .image-item {
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     padding: 1rem;
+}
+
+.image-grid .image-item img {
+     aspect-ratio: 1 / 1;
+     object-fit: cover;
+     object-position: center;
+     margin-bottom: 10px;
+}
+
+.image-grid .image-item .text {
+     font-size: 1.2rem;
+}
+
+.message {
+     text-align: center;
+     margin-bottom: 2rem;
+     font-size: 1.3rem;
+     display: none;
+}
+
+.message span {
+     color: #0193de;
+     font-weight: 700;
+}
+
+.loadMore {
+     margin: 0 auto;
+     font-size: 1rem;
+     padding: 10px 20px;
+     border-radius: 5px;
+     display: none;
+}
+
+.toaster {
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     padding: 10px 1rem;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+     border-radius: 5px;
+     font-size: 1.1rem;
+     transition: all 0.4s linear;
+     opacity: 1;
+     max-width: 350px;
+}
+
+.toaster.hide {
+     opacity: 0;
+}
