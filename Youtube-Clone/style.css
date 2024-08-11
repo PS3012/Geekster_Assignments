@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Inconsolata", monospace;
+}
+
+input:focus,
+input:focus-visible {
+     outline: none;
+}
+
+/*! HEADER */
+header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 20px;
+     padding: 10px 30px;
+     height: 55px;
+}
+
+header i {
+     cursor: pointer;
+}
+
+header .head-left {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+header .logo {
+     font-weight: 800;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 1.5rem;
+     line-height: 1;
+}
+
+header .head-left img {
+     width: 30px;
+}
+
+header .head-middle form {
+     display: grid;
+     grid-template-columns: 450px 60px;
+     border: 1px solid;
+     border-radius: 30px;
+     overflow: hidden;
+}
+
+header .head-middle input {
+     border: 0;
+     border-right: 1px solid;
+     padding: 10px 15px;
+}
+
+header .head-middle button {
+     border: 0;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+header .head-right {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: #474747;
+}
+
+/*! MAIN SECTION */
+main {
+     display: grid;
+     grid-template-columns: 250px 1fr;
+}
+
+aside {
+     padding: 20px;
+     height: calc(100vh - 55px);
+     overflow-y: auto;
+}
+
+aside .block {
+     border-bottom: 1px solid #000000;
+     padding-bottom: 10px;
+     margin-bottom: 10px;
+}
+
+aside .link-item {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     font-size: 1rem;
+     padding: 7px 10px;
+     border-radius: 5px;
+     transition: all 0.3s linear;
+     cursor: pointer;
+}
+
+aside .link-item:hover {
+     background: #00000015;
+}
+
+.videos {
+     padding: 20px;
+}
+
+.videos .head {
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin-bottom: 10px;
+}
+
+.videos .video-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 40px 20px;
+     overflow-y: auto;
+     height: calc(100vh - 145px);
+}
+
+.videos .video-card .image img {
+     width: 100%;
+     border-radius: 10px;
+     margin-bottom: 10px;
+     aspect-ratio: 16/9;
+}
+
+.videos .video-card .details {
+     display: flex;
+     gap: 10px;
+}
+
+.videos .video-card .avatar img {
+     width: 40px;
+}
+
+.videos .video-card .title {
+     font-weight: bold;
+     font-size: 1.1rem;
+     margin-bottom: 5px;
+}
+
+.videos .video-card .author {
+     margin-bottom: 5px;
+     display: block;
+     text-decoration: none;
+}
+
+.videos .video-card .dot {
+     width: 4px;
+     height: 4px;
+     background: #000000;
+     border-radius: 50%;
+}
+
+.videos .video-card .other {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+}
