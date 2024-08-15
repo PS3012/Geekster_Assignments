@@ -34,6 +34,7 @@ const generateOrderID = () => {
 orderButton.addEventListener("click", async () => {
   if (selectedItems.length > 0) {
     orderButton.innerText = "Just Wait...";
+    thankYouBox.style.display = "none";
     orderButton.setAttribute("disabled", true);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
