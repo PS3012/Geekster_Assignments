@@ -2,8 +2,16 @@ window.addEventListener("load", () => {
   let user = localStorage.getItem("user");
   if (!user) {
     user = takeUserInformation();
+  } else {
+    try {
+      user = JSON.parse(user);
+    } catch (e) {
+      console.error("Error parsing user from localStorage:", e);
+      localStorage.removeItem("user");
+      user = takeUserInformation();
+    }
   }
-  renderUserInformation(JSON.parse(user));
+  renderUserInformation(user);
 });
 
 const takeUserInformation = () => {
@@ -58,6 +66,6 @@ const takeUserInformation = () => {
 const renderUserInformation = (user) => {
   const userInfoItems = document.querySelectorAll(".userInfo");
   userInfoItems.forEach((ele) => {
-    ele.innerText = user[ele.dataset.info];
+    ele.innerText = user[ele.dataset.info] || " ";
   });
 };
