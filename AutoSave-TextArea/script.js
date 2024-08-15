@@ -6,7 +6,6 @@ const title = document.querySelector(".title");
 switcher.addEventListener("click", () => {
   hider.classList.toggle("dark");
   document.body.classList.toggle("dark");
-  title.classList.toggle("dark");
 });
 
 const debounce = (func, delay) => {
