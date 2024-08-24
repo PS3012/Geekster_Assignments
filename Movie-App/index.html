@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <main>
+      <div class="main-title fw-700">Movie App</div>
+      <div class="search">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search your Movie..."
+          class="fw-600 w-100"
+        />
+      </div>
+      <div class="movie-grid"></div>
+      <div class="loader-box">
+        <div class="head fs-2 fw-700">LOADING...</div>
+        <div class="loader">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <div class="toaster fw-700 hide"></div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

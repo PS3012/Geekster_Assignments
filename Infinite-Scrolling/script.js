@@ -30,10 +30,8 @@ async function loadPhotos() {
   page++;
 }
 
-// Load initial photos
 loadPhotos();
 
-// Detect when the user scrolls to the bottom of the page
 window.addEventListener("scroll", () => {
   if (
     window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 &&
