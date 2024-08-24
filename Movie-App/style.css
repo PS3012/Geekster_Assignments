@@ -24,6 +24,10 @@
      font-weight: 700;
 }
 
+.mb-1 {
+     margin-bottom: 0.5rem;
+}
+
 input,
 select {
      border: 1px solid #21212160;
@@ -71,6 +75,7 @@ main {
      position: relative;
      border-radius: 5px;
      overflow: hidden;
+     cursor: pointer;
 }
 
 .movie-item .image img {
@@ -156,4 +161,65 @@ main {
      40% {
           transform: scaleY(1);
      }
+}
+
+.movie-dialog-container {
+     display: none;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     backdrop-filter: blur(5px);
+     background: #21212121;
+     padding: 2rem;
+}
+
+.movie-dialog-container .dialog {
+     max-width: 750px;
+     width: 100%;
+     background: #212121;
+     color: #cccccc;
+     padding: 2rem;
+     border-radius: 5px;
+     max-height: 70vh;
+     overflow-y: auto;
+     position: relative;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+}
+
+.movie-dialog-container .dialog::-webkit-scrollbar {
+     width: 4px;
+     background: transparent;
+}
+
+.movie-dialog-container .dialog::-webkit-scrollbar-thumb {
+     background: #ffffff;
+     border-radius: 5px;
+}
+
+.movie-dialog-container .dialog::-webkit-scrollbar-button {
+     display: none;
+}
+
+.movie-dialog-container .dialog .close {
+     position: absolute;
+     top: 0.8rem;
+     right: 1rem;
+     cursor: pointer;
+}
+
+.movie-dialog-container .inner-grid {
+     display: grid;
+     grid-template-columns: 1fr 1.5fr;
+     gap: 2rem;
+}
+
+.movie-dialog-container .name {
+     font-size: 1.2rem;
+     margin-bottom: 5px;
 }

@@ -81,6 +81,6 @@ window.addEventListener("load", () => {
   }, 1000);
 
   audio.play().catch((error) => {
-    console.log("Autoplay blocked or error occurred:", error);
+    console.error("Autoplay blocked or error occurred:", error);
   });
 });

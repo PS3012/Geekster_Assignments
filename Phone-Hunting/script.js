@@ -52,7 +52,6 @@ const addDetailsEventListener = () => {
   const detailsButton = document.querySelectorAll("button[data-slug]");
   detailsButton.forEach((btn) => {
     btn.addEventListener("click", async () => {
-      console.log(btn.dataset.slug);
       const { data } = await fetchSinglePhoneData(btn.dataset.slug);
       const html = `
           <div class="dialog">
@@ -92,7 +91,6 @@ const addDetailsEventListener = () => {
         document.body.style.overflow = "unset";
         dialogContainer.innerHTML = "";
       });
-      console.log(data);
     });
   });
 };
@@ -109,7 +107,6 @@ searchButton.addEventListener("click", async () => {
     const data = await fetchData(query);
     loaderBox.style.display = "none";
     searchButton.removeAttribute("disabled");
-    console.log(data);
     renderProducts(data.data);
   }
 });
