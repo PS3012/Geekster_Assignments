@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: "Figtree", sans-serif;
+     box-sizing: border-box;
+     --theme: #f4511e;
+     --grey: #a0a0a0;
+}
+
+a {
+     text-decoration: none;
+     color: var(--theme);
+}
+
+.w-100 {
+     width: 100%;
+}
+
+.h-100 {
+     height: 100%;
+}
+
+.fw-700 {
+     font-weight: 700;
+}
+
+.fw-600 {
+     font-weight: 600;
+}
+
+.fw-500 {
+     font-weight: 500;
+}
+
+body {
+     transition: all 0.3s linear;
+}
+
+body.dark {
+     background: #000000;
+     color: #ffffff;
+}
+
+.text-theme {
+     color: var(--theme);
+}
+
+/*! CUSTOM BUTTON */
+/*! ======================================= */
+button.custom {
+     border: none;
+     padding: 7px 20px;
+     font-weight: 600;
+     border: 2px solid var(--theme);
+     text-transform: uppercase;
+     cursor: pointer;
+     position: relative;
+     background: transparent;
+     overflow: hidden;
+     border-radius: 5px;
+}
+
+button span {
+     position: relative;
+     z-index: 2;
+}
+
+button.custom::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 100%;
+     width: 100%;
+     background: var(--theme);
+     opacity: 0;
+     z-index: -1;
+     transition: all 0.5s;
+}
+
+body.dark button.custom,
+button.custom:hover {
+     color: #fff;
+}
+
+button.custom:hover::before {
+     right: 0;
+     opacity: 1;
+     z-index: 1;
+}
+
+/*! THEME TOGGLER BUTTON */
+/*! ======================================= */
+.toggle-button-container {
+     display: flex;
+     justify-content: center;
+}
+
+.toggle {
+     width: 45px;
+     display: grid;
+     grid-template-columns: 15px 15px;
+     gap: 5px;
+     background: #212121;
+     padding: 5px;
+     border-radius: 50px;
+     position: relative;
+     cursor: pointer;
+}
+
+.toggle .hider {
+     position: absolute;
+     top: 5px;
+     width: 15px;
+     height: 15px;
+     border-radius: 50%;
+     background: #ffffff;
+     left: 5px;
+     transition: all 0.3s linear;
+}
+
+.toggle .hider.dark {
+     transform: translate(20px, 0);
+}
+
+/*! HEADER */
+/*! ======================================= */
+header {
+     padding: 0 4rem;
+}
+
+header>div {
+     border: 2px solid var(--theme);
+     border-top: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     border-radius: 0 0 10px 10px;
+}
+
+header .logo {
+     display: flex;
+     align-items: center;
+     font-size: 1.5rem;
+     gap: 5px;
+}
+
+header .logo img {
+     max-width: 30px;
+}
+
+header .buttons {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+header button.user {
+     display: none;
+}
+
+header button.user span {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+@media screen and (max-width: 991px) {
+     header {
+          padding: 0 3rem;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     header {
+          padding: 0 2rem;
+     }
+}
+
+@media screen and (max-width: 576px) {
+     header {
+          padding: 0;
+     }
+
+     header>div {
+          border-left: 0;
+          border-right: 0;
+          padding: 1rem;
+          border-radius: 0;
+     }
+}
+
+/*! SECTION */
+/*! ======================================= */
+section.main-block {
+     padding: 2rem 4rem;
+     display: grid;
+     grid-template-columns: 1fr 3fr;
+     gap: 2rem;
+}
+
+/*? SIDEBAR */
+aside .category-list {
+     display: grid;
+     gap: 15px;
+     max-height: 500px;
+     overflow-y: auto;
+     margin-bottom: 2rem;
+}
+
+aside .category-list .item {
+     color: var(--grey);
+     font-size: 1.2rem;
+     transition: all 0.1s linear;
+     cursor: pointer;
+}
+
+aside .category-list .item.active,
+aside .category-list .item:hover {
+     color: var(--theme);
+     font-weight: 600;
+}
+
+aside .support-ukraine {
+     background: var(--theme);
+     padding: 1rem;
+     border-radius: 10px; 
+}
+
+aside .support-ukraine .head {
+     font-size: 1.5rem;
+     margin-bottom: 2rem;
+     color: #ffffff;
+     text-align: center;
+}
+
+aside .support-ukraine .list {
+     display: grid;
+     gap: 1rem;
+     max-height: 300px;
+     overflow-y: auto;
+}
+
+aside .support-ukraine img {
+     height: 40px;
+     object-fit: contain;
+}
+
+aside .category-list::-webkit-scrollbar,
+aside .support-ukraine .list::-webkit-scrollbar {
+     width: 8px;
+}
+
+aside .category-list::-webkit-scrollbar-thumb,
+aside .support-ukraine .list::-webkit-scrollbar-thumb {
+     background-color: #e0e0e0;
+     border-radius: 4px;
+}
+
+aside .category-list::-webkit-scrollbar-track,
+aside .support-ukraine .list::-webkit-scrollbar-track {
+     background-color: rgba(0, 0, 0, 0);
+}
+
+/*? BOOKS LISTING BLOCK */
+.books-listing-block{
+     display: grid;
+     gap: 3rem;
+}
+
+.books-listing-block .main-head {
+     font-size: 3rem;
+}
+
+.single-book-list .head {
+     color: var(--grey);
+     font-size: 1.1rem;
+     text-transform: uppercase;
+     margin-bottom: 1rem;
+}
+
+.single-book-list .book-list {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 2rem 1rem;
+     margin-bottom: 1rem;
+}
+
+.single-book-list .book-item {
+     cursor: pointer;
+}
+
+.single-book-list .book-item .image {
+     position: relative;
+     margin-bottom: 0.5rem;
+     overflow: hidden;
+}
+
+.single-book-list .book-item .image::after {
+     position: absolute;
+     bottom: -40px;
+     left: 0;
+     right: 0;
+     background: #212121;
+     color: #ffffff;
+     padding: 10px 0;
+     text-align: center;
+     transition: all 0.3s linear;
+     content: "View More";
+}
+
+.single-book-list .book-item:hover .image::after {
+bottom: 0;
+}
+
+.single-book-list .book-item img {
+    height: 270px;
+    width: 180px;
+}
+
+.single-book-list .book-item .name {
+     display: -webkit-box;
+     -webkit-line-clamp: 1;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     margin-bottom: 5px;
+}
+
+.single-book-list .book-item .author {
+     color: var(--grey);
+     font-style: italic;
+     font-size: 0.75rem;
+}
+
+.single-book-list .see-more {
+     display: flex;
+     justify-content: flex-end;
+}
+
+.single-book-list .see-more button {
+     padding: 10px 25px;
+     font-size: 1rem;
+}
+
+/*! FOOTER */
+/*! ======================================= */
+footer {
+     padding: 1rem;
+     text-align: center;
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+     font-weight: 600;
+}
+
+/*! LOGIN REGISTER CONTAINER */
+/*! ======================================= */
+#login-register-container {
+     display: none;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     backdrop-filter: blur(5px);
+     background: #21212121;
+     padding: 2rem;
+     z-index: 5;
+}
+
+#login-register-container .dialog {
+     max-width: 750px;
+     width: 100%;
+     position: relative;
+     background: #ffffff;
+     height: 50vh;
+     min-height: 400px;
+     position: relative;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+}
+
+.dark #login-register-container .dialog {
+     background: #212121;
+}
+
+#login-register-container .dialog>div:not(.image) {
+     padding: 3rem 1rem 2rem;
+     position: relative;
+}
+
+#login-register-container .dialog .close {
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     cursor: pointer;
+}
+
+.dark #login-register-container .dialog .close {
+     fill: #ffffff;
+}
+
+#login-register-container .dialog .image {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     z-index: 2;
+     transition: all 0.3s linear;
+}
+
+#login-register-container .dialog .image.signUp {
+     transform: translate(100%, 0);
+}
+
+#login-register-container .dialog .head {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+}
+
+#login-register-container .dialog button {
+     margin-bottom: 1rem;
+}
+
+#login-register-container .dialog .switch {
+     font-size: 0.9rem;
+     cursor: pointer;
+}
+
+#login-register-container .dialog input {
+     display: block;
+     width: 100%;
+     padding: 5px 15px;
+     border-radius: 5px;
+     margin-bottom: 1rem;
+     border: 1px solid var(--grey);
+     background: transparent;
+}
+
+.dark #login-register-container .dialog input {
+     color: #ffffff;
+}
+
+/*! BOOK DETAIL MODAL */
+/*! ======================================= */
+#book-detail-modal {
+     display: none;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     backdrop-filter: blur(5px);
+     background: #21212121;
+     padding: 2rem;
+     z-index: 5;
+}
+
+#book-detail-modal .dialog {
+     max-width: 600px;
+     width: 100%;
+     border: 2px solid var(--theme);
+     background: #ffffff;
+     padding: 2rem;
+     border-radius: 5px;
+     max-height: 70vh;
+     overflow-y: auto;
+     position: relative;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+}
+
+.dark #book-detail-modal .dialog {
+     background: #212121;
+}
+
+#book-detail-modal .dialog::-webkit-scrollbar {
+     width: 4px;
+     background: transparent;
+}
+
+#book-detail-modal .dialog::-webkit-scrollbar-thumb {
+     background: #ffffff;
+     border-radius: 5px;
+}
+
+#book-detail-modal .dialog::-webkit-scrollbar-button {
+     display: none;
+}
+
+#book-detail-modal .dialog .close {
+     position: absolute;
+     top: 0.8rem;
+     right: 1rem;
+     cursor: pointer;
+}
+
+.dark #book-detail-modal .dialog .close {
+     fill: #ffffff;
+}
+
+#book-detail-modal .inner-grid {
+     display: grid;
+     grid-template-columns: 200px 1fr;
+     gap: 2rem;
+}
+
+#book-detail-modal .details .name {
+     font-size: 1.4rem;
+     margin-bottom: 0.5rem;
+}
+
+#book-detail-modal .details .author {
+     font-size: 0.9rem;
+     font-style: italic;
+     color: var(--grey);
+     margin-bottom: 1rem;
+}
+
+#book-detail-modal .details .description,
+#book-detail-modal .details .buy-links {
+     margin-bottom: 1rem;
+}
+
+#book-detail-modal .details .buy-links {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 10px;
+}
+
+#book-detail-modal .details .buy-links a {
+     font-size: 0.8rem;
+}
+
+/*! TOASTER */
+/*! ======================================= */
+.toaster {
+     position: fixed;
+     top: 2rem;
+     right: 2rem;
+     padding: 1rem;
+     box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(102, 177, 87, 0.3) 0px 1px 3px -1px;
+     border-radius: 5px;
+     font-size: 1.1rem;
+     transition: all 0.4s linear;
+     opacity: 1;
+     background: #ffffff;
+     color: #212121;
+     z-index: 10;
+}
+
+.toaster.hide {
+     opacity: 0;
+     transform: translate(200px, 0);
+}
