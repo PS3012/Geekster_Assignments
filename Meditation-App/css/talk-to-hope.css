@@ -1,0 +1,125 @@
+.chatbot ::-webkit-scrollbar-track,
+.hope-grid ::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.chatbot ::-webkit-scrollbar,
+.hope-grid ::-webkit-scrollbar {
+	width: 6px;
+	background-color: transparent;
+}
+
+.chatbot ::-webkit-scrollbar-thumb,
+.hope-grid ::-webkit-scrollbar-thumb {
+	background-color: #000000;
+}
+
+#talk-to-hope-page {
+     padding: 3rem;
+}
+
+.hope-grid {
+     display: grid;
+     grid-template-columns: 400px 1fr;
+     gap: 2rem;
+}
+
+.commands-list,
+.chatbot {
+     background: #f8f8f8;
+     padding: 1rem;
+}
+
+.commands-list .head {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+}
+
+.commands-list .list {
+     display: grid;
+     gap: 5px;
+     max-height: calc(100vh - 8rem);
+     min-height: 300px;
+     overflow-y: auto;
+     padding-right: 5px;
+}
+
+.commands-list .list>div {
+     display: grid;
+     grid-template-columns: 16px 1fr;
+     gap: 10px;
+     align-items: baseline;
+}
+
+.commands-list .list span {
+     font-size: 1.1rem;
+}
+
+.chatbot .chatbox {
+     height: calc(100vh - 8rem);
+     margin-bottom: 1rem;
+     min-height: 300px;
+     overflow-y: auto;
+}
+
+.chatbot .message {
+     display: grid;
+     grid-template-columns: 35px 1fr;
+     gap: 10px;
+     align-items: baseline;
+}
+
+.chatbot .message:not(:nth-last-child(1)) {
+     margin-bottom: 20px;
+}
+
+.chatbot .message .icon {
+     border: 1px solid #212121;
+     border-radius: 50%;
+     display: grid;
+     place-items: center;
+     aspect-ratio: 1/1;
+     background: #ffffff;
+}
+
+.chatbot .message .text {
+     font-size: 1.1rem;
+}
+
+.chatbot .prompt-bar {
+     display: grid;
+     grid-template-columns: 1fr 21px;
+     gap: 10px;
+     background: #ffffff;
+     padding: 10px 1rem;
+     border-radius: 30px;
+}
+
+.chatbot .prompt-bar input {
+     border: 0;
+     background: transparent;
+     font-size: 1rem;
+}
+
+.chatbot .prompt-bar .icons {
+     font-size: 1.3rem;
+     cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+     .hope-grid {
+          grid-template-columns: 1fr;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     #talk-to-hope-page {
+          padding: 2rem;
+     }
+}
+
+@media screen and (max-width: 600px) {
+     #talk-to-hope-page {
+          padding: 1rem;
+     }
+}

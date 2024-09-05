@@ -137,31 +137,5 @@
     </footer>
     <script src="js/common.js"></script>
     <script src="js/home.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "@google/generative-ai": "https://esm.run/@google/generative-ai"
-        }
-      }
-    </script>
-    <script type="module">
-      import { GoogleGenerativeAI } from "@google/generative-ai";
-      let API_KEY = "AIzaSyCm0MDQZ5zKwdEzOYam-0H_GHz0u2BDUbs";
-      const btn = document.getElementById("btn");
-
-      const genAI = new GoogleGenerativeAI(API_KEY);
-
-      async function runCode() {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const prompt = "Give me Financial advice";
-
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = response.text();
-        console.log("res text", text);
-      }
-
-      // runCode();
-    </script>
   </body>
 </html>

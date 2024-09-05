@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/music.css" />
+    <link rel="stylesheet" href="css/talk-to-hope.css" />
   </head>
   <body>
     <header class="dark-header">
@@ -34,7 +34,7 @@
       </div>
     </header>
 
-    <div id="music-page">
+    <div id="talk-to-hope-page">
       <div class="section-head">
         <div class="heading fw-700">
           <span class="text-theme">Hopeful Conversations: </span> Your
@@ -52,6 +52,25 @@
           safe and supportive space for reflection and growth.
         </div>
       </div>
+      <div class="hope-grid">
+        <div class="commands-list">
+          <div class="head text-theme fw-700">Commands</div>
+          <div class="list"></div>
+        </div>
+        <div class="chatbot">
+          <div class="chatbox"></div>
+          <div class="prompt-bar">
+            <input
+              type="text"
+              name="prompt"
+              placeholder="Ask me anything about meditation"
+            />
+            <div class="sendPrompt icons">
+              <i class="fa-regular fa-paper-plane"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="fw-600">
@@ -61,6 +80,40 @@
       </a>
     </footer>
 
+    <div class="toaster fw-700 hide"></div>
+
     <script src="js/common.js"></script>
+    <script src="js/talk-to-hope.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+      let API_KEY = "AIzaSyCPxqAAWnUrKJGCJ07bGoye8ZUd-zNQnVo";
+      const genAI = new GoogleGenerativeAI(API_KEY);
+
+      async function runCode(prompt) {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+        addResponseToChatBox(prompt, text);
+      }
+
+      const userPrompt = document.querySelector("input[name='prompt']");
+      const sendPromptBtn = document.querySelector(".sendPrompt");
+      sendPromptBtn.addEventListener("click", () => {
+        const promptValue = userPrompt.value;
+        if (promptValue && promptValue.trim() !== "") {
+          runCode(promptValue);
+        } else {
+          showToaster("Enter valid command!");
+        }
+      });
+    </script>
   </body>
 </html>
