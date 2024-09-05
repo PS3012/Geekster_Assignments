@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Melodies - Login</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="login-register-page">
+      <img src="media/login.jpg" alt="Nature" class="media w-100 h-100" />
+      <div class="main-container">
+        <div class="login-form w-100 d-none">
+          <div class="text-theme mb-1 fw-700">MINDFUL MELODIES</div>
+          <div class="main-head mb-1 fw-700">Login to your Account</div>
+          <div class="switchButton" data-show="signup-form">
+            New to Mindful Melodies?
+            <span class="text-theme">Create a new account.</span>
+          </div>
+          <div class="form-block">
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <button class="custom-button fw-700"><span>Login</span></button>
+            <div class="fw-700 text-center">
+              <a href="index.html">Back to Home.</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="signup-form w-100">
+          <div class="text-theme mb-1 fw-700">MINDFUL MELODIES</div>
+          <div class="main-head mb-1 fw-700">Create a New Account</div>
+          <div class="switchButton fw-600" data-show="login-form">
+            Already a member?
+            <span class="text-theme">Login to your account.</span>
+          </div>
+          <div class="form-block">
+            <div class="form-dual-grid">
+              <input type="text" name="firstName" placeholder="First Name" />
+              <input type="text" name="lastName" placeholder="Last Name" />
+            </div>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <button class="custom-button fw-700">
+              <span>Create Account</span>
+            </button>
+            <div class="fw-700 text-center">
+              <a href="index.html">Back to Home.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toaster fw-700 hide"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+#music-page {
+     padding: 3rem;
+}
+
+.music-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 2rem;
+}
+
+.music-card {
+     position: relative;
+     border-radius: 5px;
+     overflow: hidden;
+}
+
+.music-card img {
+     margin-bottom: -4px;
+}
+
+.music-card .content {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     padding: 1rem;
+     background: linear-gradient(180deg, #00000021 28%, #000000ab 100%);
+}
+
+.music-card .content .playBtn i {
+     cursor: pointer;
+     transition: all 0.2s linear;
+     color: #ffffff;
+}
+
+.music-card .content .playBtn i:hover {
+     color: var(--theme);
+}
+
+@media screen and (max-width: 1200px) {
+     .music-grid {
+          grid-template-columns: repeat(3, 1fr);
+     }
+}
+
+@media screen and (max-width: 991px) {
+     .music-grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media screen and (max-width: 768px) {
+     #music-page {
+          padding: 2rem;
+     }
+}
+
+@media screen and (max-width: 600px) {
+     #music-page {
+          padding: 1rem;
+     }
+
+     .music-grid {
+          grid-template-columns: repeat(1, 1fr);
+     }
+}
