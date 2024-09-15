@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="css/scene.css" />
   </head>
   <body>
+    <div class="preloader-container">
+      <div class="preload-layout">
+        <div class="preload-grid">
+          <div class="item1"></div>
+          <div class="item2"></div>
+          <div class="item3"></div>
+          <div class="item4"></div>
+        </div>
+        <h3 class="preload-loader-h">Loading serenity...</h3>
+      </div>
+    </div>
+
     <header class="dark-header">
       <div class="logo">
         <img src="media/logo.png" alt="Logo" class="w-100" />
@@ -29,7 +41,10 @@
           <a href="scene.html" class="fw-600 active">Scene</a>
           <a href="relax-breathe.html" class="fw-600">Relax & Breathe</a>
           <a href="talk-to-hope.html" class="fw-600">Talk to Hope</a>
-          <a href="login.html" class="fw-600 login custom-button">Login</a>
+          <a href="login.html" class="fw-600 login custom-button loginBtn"
+            >Login</a
+          >
+          <div class="fw-600 login custom-button logOutBtn d-none"></div>
         </div>
       </div>
     </header>
@@ -109,6 +124,8 @@
         Piyush Sahu
       </a>
     </footer>
+
+    <div class="toaster fw-700 hide"></div>
 
     <script src="js/common.js"></script>
   </body>

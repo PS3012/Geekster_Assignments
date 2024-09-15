@@ -23,7 +23,9 @@ const handleLogin = () => {
           medUsers[idx].isLogin = true;
           localStorage.setItem("medUsers", JSON.stringify(medUsers));
           showToaster("User Login successfully!");
-          redirectUser();
+          setTimeout(() => {
+            redirectUser();
+          }, 1000);
         } else {
           showToaster("Wrong Password!");
         }
