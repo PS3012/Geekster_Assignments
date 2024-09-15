@@ -33,6 +33,7 @@ passwordInclusions.forEach((inclusion) =>
 );
 
 generateButton.addEventListener("click", () => {
+  passwordField.innerText = "";
   const passwordLength = document.querySelector('[name="passwordLength"]');
   if (
     passwordLength.value === "" ||
